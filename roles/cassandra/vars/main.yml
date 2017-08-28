@@ -1,0 +1,7 @@
+---
+cassandra_version: 3.11.0
+node1: 10.8.8.11
+node2: 10.8.8.12
+node3: 10.8.8.13
+cassandra_seeds: "{{ node1 }}, {{ node2 }}, {{ node3 }}"
+

@@ -1,0 +1,17 @@
+- name: mkdir for cassandra volumes
+  file:
+    path: /home/{{ ansible_user }}/cassandra_test/{{ item }}
+    state: directory
+    mode: 0755
+  with_items:
+    - node1
+    - node2
+    - node3
+
+- name: copy template docker-compose.yml to dir
+  template:
+    src: docker-compose.yml
+    dest: /home/{{ ansible_user }}/cassandra_test/docker-compose.yml
+    # owner: "{{ user }}"
+    # group: "{{ group }}"
+    mode: 0644
