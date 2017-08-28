@@ -12,6 +12,4 @@
   template:
     src: docker-compose.yml
     dest: /home/{{ ansible_user }}/cassandra_test/docker-compose.yml
-    # owner: "{{ user }}"
-    # group: "{{ group }}"
     mode: 0644
